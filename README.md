@@ -6,14 +6,22 @@
 
 ## 特别说明： 本项目采用Sass作为样式预处理器语言,并且引入本人自己的一个小型Mixin库(可自由向内添加自定义Mixin)
 > 如果开发者不需要Sass作为开发语言或者想要更换样式预处理语言有以下两种方式解决：
-1. 不需要Sass等预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，将组件的样式以单独`CSS`文件夹的方式引入组建当中
-2. 不需要Sass等预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，按照React推荐的方式，在组件内以`inline style`的方式来写样式
-3. 更换预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，去网上找 `React + Less` 或者 `React + stylus`等配置方法.
-4. 采用`css modules`方式来书写样式——详情自行查找解决方案
+>
+> 1. 不需要Sass等预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，将组件的样式以单独`CSS`文件夹的方式引入组建当中
+>
+> 2. 不需要Sass等预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，按照React推荐的方式，在组件内以`inline style`的方式来写样式
+>
+> 3. 更换预处理语言——删除package.json文件上的`node-sass`与`sass-loader`选项，去网上找 `React + Less` 或者 `React + stylus`等配置方法.
+>
+> 4. 采用`css modules`方式来书写样式——详情自行查找解决方案
 
 ### 如果`Yarn`无法安装`node-sass`与`sass-loader`依赖,建议考虑采用`CNPM`替代`NPM`与`Yarn`方案
 ### 如果`CNPM`也无法安装依赖的情况,请检查自己的`nodejs`版本(推荐使用V4.5以上版本)
-> 如果`Sass`依赖还是装不上,最终大招： 将你的样式文件编写在`src/style/sass`路径下，通过 `Ruby命令行`(gem安装Sass后),将`Sass`样式文件输出到`src/style/css`路径下。jsx组件内引用`src/style/css`文件夹内编译好的样式文件即可。
+> 如果`Sass`依赖还是装不上,最终大招：
+>
+> 将你的样式文件编写在`src/style/sass`路径下，通过 `Ruby命令行`(gem安装Sass后),将`Sass`样式文件输出到`src/style/css`路径下。
+>
+> jsx组件内引用`src/style/css`文件夹内编译好的样式文件即可。
 
 ***
 ## 使用技术:
