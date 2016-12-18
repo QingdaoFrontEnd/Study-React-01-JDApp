@@ -18,20 +18,43 @@
                     this.state={
                         count:0
                     }
+                    this.handleMouseEnter=this.handleMouseEnter.bind(this)
+                    this.handleMouseOut=this.handleMouseOut.bind(this)
+           }
+                    componentDidMount(){
+                        timer()
+                    }
+                    var timer;//设为全局很抱歉；
                     function timer(){
-                        var timer=setTimeout()
+                        timer=setTimeout(tick(),1000);
+                        }
+                    tick(){
+                       this.setState(function(d){
+                       if(d>banner图个数)
+                        count:0;
+                        else
+                       count:++d;
+                       }
+                       )
+                       }
+                    handleMouseEnter(){
+                    clearTimeout(timer)
                     }
-                    var i_src=".jpg";
+                    handleMouseOut(){
+                    timer();
+                    }
+                   render(){
+                   var i_src=".jpg";
                     imgstyle={
-                        float:left;
+                        float:"left";
                     }
-                    render(){
+
                     var images=[];
                     for(var i=0;i<banner图的个数;i++)
-                        image.push(<img src=i+i_src key=i/>)
+                        image.push(<img src=i+i_src key=i style={imgstyle} onMouseEnter={this.handleMouseEnter}/>)
                         return(
                         <div style={{overflow:"hidden",width:"一张banner的宽度，后边改的人自己改一下哦！"}}
-                            {images}
+                            {images[this.state.count]}//
                          </div>
                     )
                     }
