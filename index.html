@@ -10,5 +10,33 @@
     <body>
         <div id="app"></div>
         <script src="./dist/bundle.js"></script>
+        <div id="banner"></div>
+        <script type="text/babel">
+            class banner extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state={
+                        count:0
+                    }
+                    function timer(){
+                        var timer=setTimeout()
+                    }
+                    var i_src=".jpg";
+                    imgstyle={
+                        float:left;
+                    }
+                    render(){
+                    var images=[];
+                    for(var i=0;i<banner图的个数;i++)
+                        image.push(<img src=i+i_src key=i/>)
+                        return(
+                        <div style={{overflow:"hidden",width:"一张banner的宽度，后边改的人自己改一下哦！"}}
+                            {images}
+                         </div>
+                    )
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
