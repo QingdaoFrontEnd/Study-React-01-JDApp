@@ -30,9 +30,6 @@
                         }
                     tick(){
                        this.setState(function(d){
-                       if(d>banner图个数)
-                        count:0;
-                        else
                        count:++d;
                        }
                        )
@@ -54,7 +51,7 @@
                         image.push(<img src=i+i_src key=i style={imgstyle} onMouseEnter={this.handleMouseEnter}/>)
                         return(
                         <div style={{overflow:"hidden",width:"一张banner的宽度，后边改的人自己改一下哦！"}}
-                            {images[this.state.count]}//
+                            {images[this.state.count%（banner图个数]）}//
                          </div>
                     )
                     }
